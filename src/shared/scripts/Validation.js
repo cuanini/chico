@@ -360,7 +360,7 @@
 
         var condition,
             required = this.conditions.required,
-            value = this._el.value;
+            value = this._el.value.replace(/^\s+|\s+$/g, '');
 
         // Avoid fields that aren't required when they are empty or de-activated
         if (!required && value === '' && this._shown === false) {
